@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pong Turbo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="jogo">
+    <h1>🏓 Pong Turbo</h1>
+
+    <div class="placar">
+      <span>Jogador 1: <strong id="p1">0</strong></span>
+      <span id="nivel">Nível: Normal</span>
+      <span>Jogador 2: <strong id="p2">0</strong></span>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="canvas" width="800" height="480" aria-label="Quadra do jogo Pong"></canvas>
+      <div id="menu" class="menu">
+        <h2>Escolha o modo</h2>
+        <div class="grupo">
+          <button data-modo="cpu">1 jogador (vs. computador)</button>
+          <button data-modo="2p">2 jogadores</button>
+        </div>
+        <h3>Dificuldade</h3>
+        <div class="grupo">
+          <button data-nivel="facil" class="nivel">Fácil</button>
+          <button data-nivel="normal" class="nivel ativo">Normal</button>
+          <button data-nivel="dificil" class="nivel">Difícil</button>
+        </div>
+        <p class="ajuda">
+          Jogador 1: <kbd>W</kbd> / <kbd>S</kbd> &nbsp;|&nbsp; Jogador 2: <kbd>↑</kbd> / <kbd>↓</kbd><br>
+          Pausar: <kbd>P</kbd> ou <kbd>Espaço</kbd> &nbsp;|&nbsp; Primeiro a fazer 7 pontos vence
+        </p>
+      </div>
+      <div id="aviso" class="aviso" hidden></div>
+    </div>
+
+    <p class="dica">No celular: toque e arraste na quadra para mexer a sua raquete.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
